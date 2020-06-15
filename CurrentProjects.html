@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Portfolio</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="#">Java Topics</a>
+								<ul>
+									<li><a href="OOP.html">OOP</a></li>
+									<li><a href="ArrayArrayList.html">Array/ArrayList</a></li>
+									<li><a href="SearchandSort.html">Search and Sort</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Projects</a>
+								<ul>
+									<li>
+										<a href="#">Past Projects</a>
+											<ul>
+												<li><a href="PastProjects.html">Movie Theatre</a></li>
+												<li><a href="PastProjects2.html">Math Tutor</a></li>
+											</ul>
+									</li>
+									<li><a href="CurrentProjects.html">Current/Final Project</a></li>
+									<li><a href="FutureProjects.html">Future Projects</a></li>
+									
+								</ul>
+                                                        </li>
+							<li></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Current Projects/Final Project</h2>
+							<p>A project I am currently working on is a video game desgined to teach users about Covid-19. This game is a simulation game where the user will be placed in different scenarios and try to survive. The user will balance factors by making critical decisions to stay alive. One wrong choice may be fatal!!!</p>
+						</header>
+						<section>
+								<a href="#" class="image fit"><img src="images/Main Menu.jpg" alt="" /></a>
+								<ul class="actions">
+									<li><a href="https://github.com/astrocat879/ICS4U-ISP" class="button">Github</a></li>
+								</ul>
+
+							<h3>Tutorial</h3>
+							<p>To create a video game with java a useful software is javafx which allows you to create GUIs (graphics user interface). Creating scenes (the screen the user interacts with) and stages (the whole gui); the scene is positioned inside the stage. In addition, you can import an image to use as your screen.</p>
+<pre><code>
+//Creates a layout
+Pane root = new Pane();
+
+//Creating a new scene
+Scene scene = new Scene(root, 1200, 750);;
+
+//Imports an image
+Image img  = new Image("Background.jpg");
+
+//Adds the image to the background
+root.getChildren().add(new ImageView(img));
+
+//Adding the scene to the stage
+window.setScene(scene);
+
+//Displaying the stage
+window.show();
+
+</code></pre>
+							<p>Another important aspect of games is buttons. Below is a creating of a button and a method to design your own buttons.</p>							
+
+<pre><code>
+//Specialized button designs --> font, size, colour, and curvature of corners
+final String IDLE_BUTTON_STYLE = "-fx-font-size:40 ;  -fx-background-color: #8e7cc3; -fx-background-radius: 15px; -fx-text-fill: #ffffff";
+final String HOVERED_BUTTON_STYLE = "-fx-font-size:40; -fx-background-color: #674ea7; -fx-background-radius: 15px; -fx-text-fill: #ffffff;";
+final String CLICKED_BUTTON_STYLE = "-fx-font-size:40; -fx-background-color: #674ea7; -fx-background-radius: 15px; ";
+
+//Creating button
+Button button = new Button("Click Me");
+
+//Moving the button around
+button.relocate (413,295);
+
+//Setting button size
+button.setPrefSize(375, 91);
+
+//Default style of button
+button.setStyle(IDLE_BUTTON_STYLE);
+
+//If mouse if hovering over button
+button.setOnMouseEntered(e -> start.setStyle(HOVERED_BUTTON_STYLE));
+
+//If the mouse leaves the button
+button.setOnMouseExited(e -> start.setStyle(IDLE_BUTTON_STYLE));
+
+//If the mouse is pressed
+button.setOnMousePressed(e -> start.setStyle(CLICKED_BUTTON_STYLE));
+
+//When the mouse is clicked output "CLICK"
+button.setOnAction(e -> {
+	System.out.println("CLICK");
+});
+</code></pre>
+							<p>A part of my game that makes it unique is the animation that flips to the next scenario. The animation looks like a card flipping from the front side to the backside.</p>
+<pre><code>
+public static void flip(Group front, Group back){
+	ScaleTransition stHideFront = new ScaleTransition(Duration.millis(1500), front);
+        stHideFront.setFromX(1);
+        stHideFront.setToX(0);
+
+        ScaleTransition stShowBack = new ScaleTransition(Duration.millis(1500), back);
+        stShowBack.setFromX(0);
+        stShowBack.setToX(1);
+        
+        stHideFront.setOnFinished(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent t) {
+                stShowBack.play();
+            }
+        });
+        stHideFront.play();
+}
+</code></pre>							
+</section>
+
+
+					</div>
+				</div>
+
+			
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

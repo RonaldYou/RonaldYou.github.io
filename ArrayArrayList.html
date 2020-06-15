@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Portfolio</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="#">Java Topics</a>
+								<ul>
+									<li><a href="OOP.html">OOP</a></li>
+									<li><a href="ArrayArrayList.html">Array/ArrayList</a></li>
+									<li><a href="SearchandSort.html">Search and Sort</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Projects</a>
+								<ul>
+									<li>
+										<a href="#">Past Projects</a>
+											<ul>
+												<li><a href="PastProjects.html">Movie Theatre</a></li>
+												<li><a href="PastProjects2.html">Math Tutor</a></li>
+											</ul>
+									</li>
+									<li><a href="CurrentProjects.html">Current/Final Project</a></li>
+									<li><a href="FutureProjects.html">Future Projects</a></li>
+									
+								</ul>
+                                                        </li>
+							<li></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Array/ArrayList</h2>
+							<p>A more efficient method of storing data</p>
+						</header>
+						<div class="row gtr-150">
+							<div class="col-8 col-12-medium">
+
+								<!-- Content -->
+									<section id="content">
+
+										<h3>Arrays</h3>
+										<p>Arrays are used to store multiple values of a data type (primitive and composite), however, every array has a set size. Arrays are extremely useful and beneficial as now there is no need to create seperate variables per value. Below are two methods to instantiate arrays. The first method creates an array of size 3 with nothingin it while the second method creates an array of of size 3 already filled with 3 cars.</p>
+										<a href="#" class="image fit"><img src="images/array.jpg" alt="" /></a>
+<pre><code>
+//Method 1
+String car [] = new String [3];
+
+//Method 2
+String car [] = {BMW, Auidi, Toyota};
+
+//Example 1 --> outputs BMW
+System.out.println(car[1]);
+
+//Example 2 --> outputs 3
+System.out.println(car.length);
+</code></pre>										
+		
+									<p>Important array functions include finding the length of an array, Example 1 by using the .length method - note: the indices of an array (the position of each value) starts from 0 making the last index of an array the length minus 1.  To find the value at an index, Example 2 we use arr[i] where "arr" is the name of the array and "i" is the index shown above. When reading from an array we use the index of the array to determine which element we want to read. One way of reading from an array is using a for loop as it loops continuously until the end of the array is reached.</p>
+								
+										<h3>ArrayLists</h3>
+										<p>ArrayLists are very similar to arrays. ArrayLists can also contain multiple values of a data type however arraylists have no definite size, as the amount of values increase, the size of the arraylist increases with it. The code bellow shows how to declare an arraylist which is quite different than arrays another difference is finding the length of an arraylist. Instead of using .legnth arraylists use .size(). </p>
+<pre><code>
+//Initializing
+ArrayList<String> car = new ArrayList<String>();
+
+//ArrayList size --> outputs 3
+System.out.println(car.size());
+
+//Add
+car.add("BMW");
+car.add("Auidi");
+car.add("Toyota");
+
+//Element at index --> outputs BMW
+System.out.println(car.get(1));
+
+//Removing the first element
+card.remove(1);
+
+</code></pre>		
+										<p>Arrays do not contain any methods to add or remove values however arraylists do. Once you have declared an arraylist you can add elements using a car.add("val") where "car" is the arraylist and "val" is the value being added. To remove an element in an array you would need to create a new array on the other hand, to remove from an arraylist you can use the remove function, car.remove(idx) where "car" is the arraylist and "idx" is the index of the value being removed.</p>	
+									</section>
+
+							</div>
+							<div class="col-4 col-12-medium">
+
+								<!-- Sidebar -->
+									<section id="sidebar">
+										<section>
+											<h3>For Loops</h3>
+											<p>For loops is a type of loop that takes three arguments allowing you to control the number of times the loop will run.</p>
+											<footer>
+												<ul class="actions">
+													<li><a href="https://www.w3schools.com/java/java_for_loop.asp" class="button">Learn More</a></li>
+												</ul>
+											</footer>
+										</section>
+										<hr />
+										<section>
+											<a href="#" class="image fit"><img src="images/searchSort.png" alt="" /></a>
+											<h3>Search and Sorting</h3>
+											<p>Many algorithms have been created to make it eaiser to sort an array and to find a specific value within an array.</p>
+											<footer>
+												<ul class="actions">
+													<li><a href="SearchandSort.html" class="button">Learn More</a></li>
+												</ul>
+											</footer>
+										</section>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

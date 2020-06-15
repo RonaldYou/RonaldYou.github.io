@@ -1,0 +1,161 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Portfolio</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="#">Java Topics</a>
+								<ul>
+									<li><a href="OOP.html">OOP</a></li>
+									<li><a href="ArrayArrayList.html">Array/ArrayList</a></li>
+									<li><a href="SearchandSort.html">Search and Sort</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Projects</a>
+								<ul>
+									<li>
+										<a href="#">Past Projects</a>
+											<ul>
+												<li><a href="PastProjects.html">Movie Theatre</a></li>
+												<li><a href="PastProjects2.html">Math Tutor</a></li>
+											</ul>
+									</li>
+									<li><a href="CurrentProjects.html">Current/Final Project</a></li>
+									<li><a href="FutureProjects.html">Future Projects</a></li>
+									
+								</ul>
+                                                        </li>
+							<li></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>OOP</h2>
+							<p>Object Oriented Programming</p>
+						</header>
+						<div class="row gtr-150">
+							<div class="col-4 col-12-medium">
+
+								<!-- Sidebar -->
+									<section id="sidebar">
+										<section>
+											<h3>Inheritance</h3>
+											<p>Inheritance is an important pillar of OOP(Object Oriented Programming). It is the mechanism in java by which one class is allow to inherit the features(fields and methods) of another class.</p>
+											<footer>
+												<ul class="actions">
+													<li><a href="https://www.w3schools.com/java/java_inheritance.asp" class="button">Learn More</a></li>
+												</ul>
+											</footer>
+										</section>
+										<hr />
+										<section>
+											
+											<a href="#" class="image fit"><img src="images/polymorphism.png" alt="" /></a>
+											<h3>Polymorphism</h3>
+											<p>Polymorphism is the ability of an object to take on many forms. The most common use of polymorphism in OOP occurs when a parent class reference is used to refer to a child class object.</p>
+											<footer>
+												<ul class="actions">
+													<li><a href="https://www.w3schools.com/java/java_polymorphism.asp" class="button">Learn More</a></li>
+												</ul>
+											</footer>
+										</section>
+									</section>
+
+							</div>
+							<div class="col-8 col-12-medium imp-medium">
+
+								<!-- Content -->
+									<section id="content">
+										<h3>The Basics of OOP</h3>
+										<p>Object-oriented programming is creating objects that contain both data and methods. Classes and objects are two main parts of OOP - in simple terms a class is a template for objects and an object is an instance of a class. A class is the blueprint of the attributes and methods of an objects. Attributes or behaviors are the distinct features of the object. Methods are the actions the object can perform or actions that can be used to manipulate the object. Below is an example of
+										a class called cereal. The attributes are the name, the manufactuer, the calories, and the rating of the cereal. The methods of the cereal class include get methods which return the value of an attribute (getManufacturer), set methods which change the attributes of the class (changeRating). Other important aspects of a class are the contructor and toString methods. The contructor (the first method) instantiates the object while the toString method outputs a string when you try to
+										print an object.</p>
+<pre><code>
+public class cereal{
+    String name;
+    char manufacturer;
+    double calories, rating;
+
+    public cereal(String n, char m, double cal, double r){
+        name = n;
+        manufacturer = m;
+        calories = cal;
+        rating = r;
+    }
+
+    public String toString(){
+        return name + " cereal by " + manufacturer;
+    }
+
+    public void changeRating(double r){
+        rating = r;
+    }
+
+    public double getCalories(){
+        return calories;
+    }
+
+    public double getRating(){
+        return rating;
+    }
+
+    public char getManufacturer(){
+        return manufacturer; 
+    }
+
+}
+</code></pre>
+										
+										
+										<p>Below is an example of a declaration and instantiation of an object of the above class - cereal. Object "c" is created by using the constructor above.</p>
+<pre><code>								
+public class Main {
+    public static void main(String[] args) {
+        cereal c = new cereal("All-Bran", 'K', 70, 59.425505);
+        System.out.println(c);
+        System.out.println("Type: " + c.getType());
+        System.out.println("Calories: " + c.getCalories());
+        System.out.println("Rating: " + c.getRating());
+
+    }
+}
+</code></prev>
+									<a href="#" class="image fit"><img src="images/dogClass.png" alt="" /></a>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
